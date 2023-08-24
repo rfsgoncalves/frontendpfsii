@@ -1,5 +1,5 @@
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import { Row, Col, Form, Button } from 'react-bootstrap';
+import {Label, Row, Col, Form, Button } from 'react-bootstrap';
 import CaixaSelecao from '../meusComponentes/busca/CaixaSelecao';
 import { useState } from 'react';
 export default function FormCadProduto(props) {
@@ -25,7 +25,7 @@ export default function FormCadProduto(props) {
         }
     }
 
-    function gravarProduto(){
+    function gravarProduto(e){
         /*fetch('http://129.146.32.171:4000/produtos', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -39,6 +39,8 @@ export default function FormCadProduto(props) {
             })
         })*/
         console.log(categoriaSelecionada);
+        e.stopPropagation();
+        e.preventDefault();
     }
     return (
         <>
@@ -81,6 +83,12 @@ export default function FormCadProduto(props) {
                 </Row>
                 <Row>
                     <Col>
+                        <Label 
+                            className="mb-3"
+
+                        >
+                            Categoria do Produto:
+                        </Label>
                         <CaixaSelecao enderecoFonteDados={"https://129.146.68.51/aluno0-pfsii/categorias"}
                             campoChave={"codigo"}
                             campoExibicao={"nome"}
