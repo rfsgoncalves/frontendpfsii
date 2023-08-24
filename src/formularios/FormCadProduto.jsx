@@ -1,5 +1,5 @@
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import {Label, Row, Col, Form, Button } from 'react-bootstrap';
+import {Row, Col, Form, Button } from 'react-bootstrap';
 import CaixaSelecao from '../meusComponentes/busca/CaixaSelecao';
 import { useState } from 'react';
 export default function FormCadProduto(props) {
@@ -83,12 +83,12 @@ export default function FormCadProduto(props) {
                 </Row>
                 <Row>
                     <Col>
-                        <Label 
+                        <Form.Label 
                             className="mb-3"
 
                         >
                             Categoria do Produto:
-                        </Label>
+                        </Form.Label>
                         <CaixaSelecao enderecoFonteDados={"https://129.146.68.51/aluno0-pfsii/categorias"}
                             campoChave={"codigo"}
                             campoExibicao={"nome"}
