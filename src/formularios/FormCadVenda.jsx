@@ -26,7 +26,7 @@ export default function FormCadVenda(props) {
     });
 
     useEffect(() => {
-        fetch('http://129.146.32.171:4000/clientes', { method: "GET" })
+        fetch('https://129.146.68.51/aluno0-pfsii/clientes', { method: "GET" })
             .then((resposta) => {
                 return resposta.json();
             })
